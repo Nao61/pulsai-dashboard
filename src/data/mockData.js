@@ -37,7 +37,7 @@ export const recentActivities = [
   {
     id: 1,
     type: 'conversation',
-    user: 'Marie Dupont',
+    user: 'HARNIX',
     action: 'a envoyé un nouveau message',
     time: 'Il y a 5 min',
     status: 'unread'
@@ -45,7 +45,7 @@ export const recentActivities = [
   {
     id: 2,
     type: 'ticket',
-    user: 'Jean Martin',
+    user: 'HARNIX SAS',
     action: 'a créé un ticket urgent',
     time: 'Il y a 12 min',
     status: 'urgent'
@@ -54,7 +54,7 @@ export const recentActivities = [
     id: 3,
     type: 'campaign',
     user: 'Système',
-    action: 'Campagne "Promo Été" envoyée avec succès',
+    action: 'Campagne envoyée avec succès',
     time: 'Il y a 1h',
     status: 'success'
   },
@@ -69,7 +69,7 @@ export const recentActivities = [
   {
     id: 5,
     type: 'ticket',
-    user: 'Sophie Leclerc',
+    user: 'HARNIX GROUP',
     action: 'a résolu le ticket #1234',
     time: 'Il y a 3h',
     status: 'resolved'

@@ -1,4 +1,3 @@
-// src/app/auth/register/page.jsx
 'use client';
 
 import { useState } from 'react';
@@ -26,7 +25,6 @@ export default function RegisterPage() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -56,12 +54,14 @@ export default function RegisterPage() {
         setErrors({ general: result.error });
       }
     } catch (error) {
-      if (error.errors) {
+      if (error.issues) {
         const zodErrors = {};
-        error.errors.forEach(err => {
+        error.issues.forEach(err => {
           zodErrors[err.path[0]] = err.message;
         });
         setErrors(zodErrors);
+      } else {
+        setErrors({ general: 'Une erreur est survenue' });
       }
     } finally {
       setIsLoading(false);
@@ -73,7 +73,7 @@ export default function RegisterPage() {
     if (!password) return { label: '', color: '', width: '0%' };
     
     let strength = 0;
-    if (password.length >= 8) strength++;
+    if (password.length >= 6) strength++;
     if (/[A-Z]/.test(password)) strength++;
     if (/[0-9]/.test(password)) strength++;
     if (/[^A-Za-z0-9]/.test(password)) strength++;
@@ -126,7 +126,7 @@ export default function RegisterPage() {
               label="Nom complet"
               type="text"
               name="name"
-              placeholder="John Doe"
+              placeholder="Votre Nom"
               icon={User}
               value={formData.name}
               onChange={handleChange}

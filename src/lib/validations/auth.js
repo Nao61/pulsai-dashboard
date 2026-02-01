@@ -6,7 +6,6 @@ export const loginSchema = z.object({
     .email('Email invalide'),
   password: z.string()
     .min(1, 'Veuillez remplir cet champ')
-    .min(8, 'Le mot de passe doit contenir au moins 8 caractères')
 });
 
 export const registerSchema = z.object({
@@ -18,7 +17,7 @@ export const registerSchema = z.object({
     .email('Email invalide'),
   password: z.string()
     .min(1, 'Veuillez remplir cet champ')
-    .min(8, 'Le mot de passe doit contenir au moins 8 caractères')
+    .min(6, 'Le mot de passe doit contenir au moins 6 caractères')
     .regex(/[A-Z]/, 'Le mot de passe doit contenir au moins une majuscule')
     .regex(/[0-9]/, 'Le mot de passe doit contenir au moins un chiffre'),
   confirmPassword: z.string()

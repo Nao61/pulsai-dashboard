@@ -47,12 +47,14 @@ export default function LoginPage() {
         setErrors({ general: result.error });
       }
     } catch (error) {
-      if (error.errors) {
+      if (error.issues) {
         const zodErrors = {};
-        error.errors.forEach(err => {
+        error.issues.forEach(err => {
           zodErrors[err.path[0]] = err.message;
         });
         setErrors(zodErrors);
+      } else {
+        setErrors({ general: 'Une erreur est survenue' });
       }
     } finally {
       setIsLoading(false);
