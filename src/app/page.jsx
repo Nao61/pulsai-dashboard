@@ -43,7 +43,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[var(--color-neutral-50)] via-blue-50 to-[var(--color-secondary-light)]">
-      {/* Header */}
       <header className="border-b border-white/20 bg-white/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
@@ -64,7 +63,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-32">
         <div className="text-center max-w-4xl mx-auto">
           <motion.div

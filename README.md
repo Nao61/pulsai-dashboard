@@ -36,7 +36,7 @@ PulsAI est une plateforme CRM intelligente qui combine IA conversationnelle, ges
 
 ---
 
-## 🚀 Installation et démarrage
+## Installation et démarrage
 
 ### Prérequis
 

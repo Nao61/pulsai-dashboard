@@ -1,4 +1,3 @@
-// src/app/dashboard/conversations/page.jsx
 'use client';
 
 import { useState } from 'react';
@@ -42,9 +41,7 @@ export default function ConversationsPage() {
 
   return (
     <div className="h-[calc(100vh-180px)] flex gap-4 max-w-[1600px] mx-auto">
-      {/* Sidebar - Liste des conversations */}
       <div className="w-full sm:w-80 lg:w-96 flex flex-col bg-white border border-neutral-200 rounded-xl overflow-hidden">
-        {/* Header Sidebar */}
         <div className="p-4 border-b border-neutral-100">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-[17px] font-semibold text-neutral-900">
@@ -55,7 +52,6 @@ export default function ConversationsPage() {
             </button>
           </div>
 
-          {/* Search */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" size={16} />
             <input
@@ -81,11 +77,9 @@ export default function ConversationsPage() {
         </div>
       </div>
 
-      {/* Main Chat Area */}
       <div className="flex-1 flex flex-col bg-white border border-neutral-200 rounded-xl overflow-hidden">
         {selectedConversation ? (
           <>
-            {/* Chat Header */}
             <div className="px-6 py-4 border-b border-neutral-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
@@ -132,7 +126,6 @@ export default function ConversationsPage() {
               </div>
             </div>
 
-            {/* Messages Area */}
             <div className="flex-1 overflow-y-auto p-6 bg-neutral-50">
               <div className="max-w-4xl mx-auto">
                 {selectedConversation.messages.map((message, index) => (
@@ -141,7 +134,6 @@ export default function ConversationsPage() {
               </div>
             </div>
 
-            {/* Input Area */}
             <div className="p-4 border-t border-neutral-100 bg-white">
               <form onSubmit={handleSendMessage} className="flex items-end gap-3">
                 <div className="flex-1 relative">
