@@ -5,7 +5,7 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 export default function DashboardLayout({ children }) {
   return (
     <ProtectedRoute>
-      <div className="flex h-screen bg-neutral-50 overflow-hidden">
+      <div className="flex h-screen bg-neutral-50 overflow-hidden lg:ml-0">
         <Sidebar />
         
         <div className="flex-1 flex flex-col overflow-hidden lg:ml-0">
