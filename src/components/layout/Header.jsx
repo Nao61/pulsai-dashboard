@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-[var(--color-neutral-200)] px-6 py-4 sticky top-0 z-30">
       <div className="flex items-center justify-between">
-        <div className="flex-1 lg:ml-0 ml-12">
+        <div className="flex-1 ml-12">
           <h1 className="text-2xl font-bold text-[var(--color-neutral-900)]">
             Tableau de bord
           </h1>

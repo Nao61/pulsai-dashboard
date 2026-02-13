@@ -42,7 +42,7 @@ export default function Sidebar() {
     <>
       <button
         onClick={() => setIsMobileOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-md text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]"
+        className="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-md text-[var(--color-neutral-700)] hover:bg-[var(--color-neutral-100)]"
       >
         <Menu size={24} />
       </button>
@@ -54,7 +54,7 @@ export default function Sidebar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsMobileOpen(false)}
-            className="lg:hidden fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/50 z-40"
           />
         )}
       </AnimatePresence>
@@ -64,7 +64,7 @@ export default function Sidebar() {
         animate={{ x: isMobileOpen ? 0 : -280 }}
         transition={{ type: 'spring', damping: 25 }}
         className={`
-          fixed lg:static inset-y-0 left-0 z-50
+          fixed inset-y-0 left-0 z-50
           w-64 bg-white border-r border-[var(--color-neutral-200)]
           flex flex-col
           lg:translate-x-0
@@ -75,7 +75,7 @@ export default function Sidebar() {
             <Logo size="md" />
             <button
               onClick={() => setIsMobileOpen(false)}
-              className="lg:hidden p-2 hover:bg-[var(--color-neutral-100)] rounded-lg"
+              className="p-2 hover:bg-[var(--color-neutral-100)] rounded-lg"
             >
               <X size={20} />
             </button>
